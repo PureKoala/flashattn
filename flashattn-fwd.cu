@@ -12,7 +12,8 @@ void flash2_forward_kernel(
     const int Tc, const int Tr, const int Bc, const int Br, const data_t softmax_scale,
     data_t* L, data_t* O
 ){
-    int tx = threadIdx.x;
+    int tx  = threadIdx.x;
+    int ntx = blockDim.x;
 
     int bx = blockIdx.x; // batch index
     int by = blockIdx.y; // head  index
@@ -34,23 +35,29 @@ void flash2_forward_kernel(
     data_t l[Br];
 
     for (int i = 0; i < Tr; i++){
-        for (int x = 0; x < d; x++){
-            Qi[tx * d + x] = Q[qkv_offset + tile_size_Q * i + tx * d + x];   
+
+        // load Qi
+        for (int r = 0; r < Br; r += ntx){
+            if (tx + r < Br){
+                for (int x = 0; x < d; x++){
+                    Qi[(tx + r) * d + x] = Q[qkv_offset + tile_size_Q * i + (tx + r) * d + x];
+                }
+            }
         }
 
         m[tx] = -INFINITY;
         l[tx] = 0;
 
-        __syncthreads();
+        // __syncthreads();
 
         for (int j = 0; j < Tc; j++){
 
             // load Kj, Vj, m, l
-            for (int x = 0; x < d; x++){
-                for(int y = 0; y < Bc; y += Br){
-                    if (tx + y < Bc){
-                        Kj[(tx + y) * d + x] = K[qkv_offset + tile_size_KV * j + (tx + y) * d + x];
-                        Vj[(tx + y) * d + x] = V[qkv_offset + tile_size_KV * j + (tx + y) * d + x];
+            for (int c = 0; c < Bc; c += ntx){
+                if (tx + c < Bc){
+                    for (int x = 0; x < d; x++){
+                        Kj[(tx + c) * d + x] = K[qkv_offset + tile_size_KV * j + (tx + c) * d + x];
+                        Vj[(tx + c) * d + x] = V[qkv_offset + tile_size_KV * j + (tx + c) * d + x];
                     }
                 }
             }
@@ -62,51 +69,80 @@ void flash2_forward_kernel(
 
             // compute SP = QK^T, row_m = rowmax(S)
             data_t row_m = -INFINITY;
-            for (int y = 0; y < Bc; y++){
-                data_t sum = 0;
-                for (int x = 0; x < d; x++){
-                    sum += Qi[tx * d + x] * Kj[y * d + x];
-                }
-                sum *= softmax_scale;
-                SP[tx * Bc + y] = sum;
+            for (int rc = 0; rc < Bc * Br; rc += ntx){
+                if (tx + rc < Bc * Br){
+                    int y = rc / Bc;
+                    int x = rc % Bc;
+                    data_t sum = 0;
+                    for (int z = 0; z < d; z++){
+                        sum += Qi[y * d + z] * Kj[x * d + z];
+                    }
 
-                if (sum > row_m){
-                    row_m = sum;
+                    sum *= softmax_scale;
+                    SP[y * Bc + x] = sum;
+                    if (sum > row_m){
+                        row_m = sum;
+                    }
                 }
             }
 
-            // compute row_l, P
+            __syncthreads();
+
+            // compute row_l, S -> P
             data_t row_l = 0;
-            for(int y = 0; y < Bc; y++){
-                SP[tx * Bc + y] = __expf(SP[tx * Bc + y] - row_m);
-                row_l += SP[tx * Bc + y];
+            for (int r = 0; r < Br; r += ntx){
+                if (tx + r < Br){
+                    for (int x = 0; x < d; x++){
+                        SP[(tx + r) * Bc + x] = __expf(SP[(tx + r) * Bc + x] - row_m);
+                        row_l += SP[(tx + r) * Bc + x];}
+                }
             }
 
             // compute new m, l
             data_t row_m_new = max(row_m, row_m_prev);
-            data_t row_l_new = __expf(row_m_prev - row_m_new) * row_l_prev + __expf(row_m - row_m_new) * row_l;
+
+            data_t row_m_pre_new   = __expf(row_m_prev - row_m_new);
+            data_t row_m_block_new = __expf(row_m - row_m_new);
+            
+            data_t row_l_new = row_m_pre_new * row_l_prev + row_m_block_new * row_l;
 
             // compute O, l, m
-            for (int x = 0; x < d; x++){
-                data_t pv = 0; // Pij * Vj
-                for (int y = 0; y < Bc; y++){
-                    pv += SP[tx * Bc + y] * Vj[y * d + x];
+            for (int rd = 0; rd < Br * d; rd += ntx){
+                if (tx + rd < Br * d){
+                    int r = rd / d;
+                    int x = rd % d;
+                    data_t pv = 0; // Pij * Vj
+                    for (int y = 0; y < Bc; y++){
+                        pv += SP[r * Bc + y] * Vj[y * d + x];
+                    }
+                    O[qkv_offset + tile_size_Q * i + r * d + x] = O[qkv_offset + tile_size_Q * i + r * d + x] * row_m_pre_new + pv;
                 }
-                O[qkv_offset + tile_size_Q * i + tx * d + x] = O[qkv_offset + tile_size_Q * i + tx * d + x] * __expf(row_m_prev - row_m_new) + pv;
             }
 
-            m[tx] = row_m_new;
-            l[tx] = row_l_new;
-
+            for (int r = 0; r < Br; r += ntx){
+                if (tx + r < Br){
+                    m[tx + r] = row_m_new;
+                    l[tx + r] = row_l_new;
+                }
+            }
         }
 
         // write O, L to HBM
-        for (int x = 0; x < d; x++){
-            O[qkv_offset + tile_size_Q * i + tx * d + x] = O[qkv_offset + tile_size_Q * i + tx * d + x] / l[tx];
+        for (int rd = 0; rd < Br * d; rd += ntx){
+            if (tx + rd < Br * d){
+                int r = rd / d;
+                int x = rd % d;
+                O[qkv_offset + tile_size_Q * i + r * d + x] = O[qkv_offset + tile_size_Q * i + r * d + x] / l[tx];
+            }
         }
-        L[L_offset + i * Br + tx] = l[tx];
+
+        for (int r = 0; r < Br; r += ntx){
+            if (tx + r < Br){
+                L[L_offset + i * Br + tx] = l[tx];
+            }
+        }
         
-        __syncthreads();
+        // __syncthreads();
     }
 }
 
