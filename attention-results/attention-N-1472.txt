@@ -1,0 +1,561 @@
+	Time taken to compute word embedding: 6.046783 seconds
+================ Begin to prefill N = 1472, d = 1024 ================
+======== Prefill layer 0 ========
+	Time taken to compute attention pre layer norm: 0.031646 seconds
+	Time taken to compute Q, K, V: 24.647606 seconds
+	Time taken to compute S: 11.646856 seconds
+	Time taken to compute P: 0.116056 seconds
+	Time taken to compute O: 11.742685 seconds
+	Time taken to compute attention block: 23.506462 seconds
+	Time taken to compute attention residual connection: 0.011807 seconds
+	Time taken to compute MLP pre layer norm: 0.032838 seconds
+	Time taken to compute H1: 31.458394 seconds
+	Time taken to compute Gelu: 0.091833 seconds
+	Time taken to compute H2: 31.738687 seconds
+	Time taken to compute MLP residual connection: 0.015089 seconds
+======== Prefill layer 1 ========
+	Time taken to compute attention pre layer norm: 0.029115 seconds
+	Time taken to compute Q, K, V: 24.083183 seconds
+	Time taken to compute S: 11.730767 seconds
+	Time taken to compute P: 0.227238 seconds
+	Time taken to compute O: 11.809676 seconds
+	Time taken to compute attention block: 23.768474 seconds
+	Time taken to compute attention residual connection: 0.011933 seconds
+	Time taken to compute MLP pre layer norm: 0.029167 seconds
+	Time taken to compute H1: 31.635213 seconds
+	Time taken to compute Gelu: 0.092057 seconds
+	Time taken to compute H2: 31.866225 seconds
+	Time taken to compute MLP residual connection: 0.011942 seconds
+======== Prefill layer 2 ========
+	Time taken to compute attention pre layer norm: 0.029159 seconds
+	Time taken to compute Q, K, V: 24.101463 seconds
+	Time taken to compute S: 11.628260 seconds
+	Time taken to compute P: 0.222621 seconds
+	Time taken to compute O: 11.825349 seconds
+	Time taken to compute attention block: 23.676280 seconds
+	Time taken to compute attention residual connection: 0.011766 seconds
+	Time taken to compute MLP pre layer norm: 0.029504 seconds
+	Time taken to compute H1: 31.237895 seconds
+	Time taken to compute Gelu: 0.089992 seconds
+	Time taken to compute H2: 31.494968 seconds
+	Time taken to compute MLP residual connection: 0.011974 seconds
+======== Prefill layer 3 ========
+	Time taken to compute attention pre layer norm: 0.029187 seconds
+	Time taken to compute Q, K, V: 24.744629 seconds
+	Time taken to compute S: 11.838647 seconds
+	Time taken to compute P: 0.221738 seconds
+	Time taken to compute O: 11.733451 seconds
+	Time taken to compute attention block: 23.793895 seconds
+	Time taken to compute attention residual connection: 0.012873 seconds
+	Time taken to compute MLP pre layer norm: 0.029903 seconds
+	Time taken to compute H1: 31.319808 seconds
+	Time taken to compute Gelu: 0.091971 seconds
+	Time taken to compute H2: 31.504471 seconds
+	Time taken to compute MLP residual connection: 0.011951 seconds
+======== Prefill layer 4 ========
+	Time taken to compute attention pre layer norm: 0.029243 seconds
+	Time taken to compute Q, K, V: 24.371154 seconds
+	Time taken to compute S: 11.689420 seconds
+	Time taken to compute P: 0.218989 seconds
+	Time taken to compute O: 11.577159 seconds
+	Time taken to compute attention block: 23.485636 seconds
+	Time taken to compute attention residual connection: 0.011797 seconds
+	Time taken to compute MLP pre layer norm: 0.029382 seconds
+	Time taken to compute H1: 31.200713 seconds
+	Time taken to compute Gelu: 0.093673 seconds
+	Time taken to compute H2: 32.447552 seconds
+	Time taken to compute MLP residual connection: 0.012011 seconds
+======== Prefill layer 5 ========
+	Time taken to compute attention pre layer norm: 0.029173 seconds
+	Time taken to compute Q, K, V: 24.238332 seconds
+	Time taken to compute S: 11.915381 seconds
+	Time taken to compute P: 0.189683 seconds
+	Time taken to compute O: 11.717040 seconds
+	Time taken to compute attention block: 23.822166 seconds
+	Time taken to compute attention residual connection: 0.012106 seconds
+	Time taken to compute MLP pre layer norm: 0.037370 seconds
+	Time taken to compute H1: 31.525645 seconds
+	Time taken to compute Gelu: 0.093406 seconds
+	Time taken to compute H2: 31.736952 seconds
+	Time taken to compute MLP residual connection: 0.011964 seconds
+================ Begin to decoding ================
+======== Decoding round 0 ========
+	Time taken to compute word embedding: 0.004149 seconds
+======== Decoding layer 0 ========
+	Time taken to compute attention pre layer norm: 0.000023 seconds
+	Time taken to compute Q, K, V: 0.016090 seconds
+	Time taken to compute S: 0.007610 seconds
+	Time taken to compute P: 0.000069 seconds
+	Time taken to compute O: 0.045961 seconds
+	Time taken to compute attention block: 0.053671 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000024 seconds
+	Time taken to compute H1: 0.021779 seconds
+	Time taken to compute Gelu: 0.000065 seconds
+	Time taken to compute H2: 0.021485 seconds
+	Time taken to compute MLP residual connection: 0.000009 seconds
+======== Decoding layer 1 ========
+	Time taken to compute attention pre layer norm: 0.000022 seconds
+	Time taken to compute Q, K, V: 0.016001 seconds
+	Time taken to compute S: 0.007658 seconds
+	Time taken to compute P: 0.000150 seconds
+	Time taken to compute O: 0.044715 seconds
+	Time taken to compute attention block: 0.052553 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000023 seconds
+	Time taken to compute H1: 0.021693 seconds
+	Time taken to compute Gelu: 0.000074 seconds
+	Time taken to compute H2: 0.021306 seconds
+	Time taken to compute MLP residual connection: 0.000010 seconds
+======== Decoding layer 2 ========
+	Time taken to compute attention pre layer norm: 0.000022 seconds
+	Time taken to compute Q, K, V: 0.016079 seconds
+	Time taken to compute S: 0.007653 seconds
+	Time taken to compute P: 0.000149 seconds
+	Time taken to compute O: 0.045560 seconds
+	Time taken to compute attention block: 0.053401 seconds
+	Time taken to compute attention residual connection: 0.000007 seconds
+	Time taken to compute MLP pre layer norm: 0.000023 seconds
+	Time taken to compute H1: 0.021754 seconds
+	Time taken to compute Gelu: 0.000064 seconds
+	Time taken to compute H2: 0.021449 seconds
+	Time taken to compute MLP residual connection: 0.000010 seconds
+======== Decoding layer 3 ========
+	Time taken to compute attention pre layer norm: 0.000023 seconds
+	Time taken to compute Q, K, V: 0.015810 seconds
+	Time taken to compute S: 0.007738 seconds
+	Time taken to compute P: 0.000142 seconds
+	Time taken to compute O: 0.043246 seconds
+	Time taken to compute attention block: 0.051157 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000023 seconds
+	Time taken to compute H1: 0.021766 seconds
+	Time taken to compute Gelu: 0.000064 seconds
+	Time taken to compute H2: 0.021473 seconds
+	Time taken to compute MLP residual connection: 0.000009 seconds
+======== Decoding layer 4 ========
+	Time taken to compute attention pre layer norm: 0.000023 seconds
+	Time taken to compute Q, K, V: 0.016086 seconds
+	Time taken to compute S: 0.007670 seconds
+	Time taken to compute P: 0.000145 seconds
+	Time taken to compute O: 0.041043 seconds
+	Time taken to compute attention block: 0.048886 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000023 seconds
+	Time taken to compute H1: 0.021779 seconds
+	Time taken to compute Gelu: 0.000065 seconds
+	Time taken to compute H2: 0.021499 seconds
+	Time taken to compute MLP residual connection: 0.000009 seconds
+======== Decoding layer 5 ========
+	Time taken to compute attention pre layer norm: 0.000022 seconds
+	Time taken to compute Q, K, V: 0.016046 seconds
+	Time taken to compute S: 0.007649 seconds
+	Time taken to compute P: 0.000134 seconds
+	Time taken to compute O: 0.033128 seconds
+	Time taken to compute attention block: 0.040948 seconds
+	Time taken to compute attention residual connection: 0.000007 seconds
+	Time taken to compute MLP pre layer norm: 0.000023 seconds
+	Time taken to compute H1: 0.021694 seconds
+	Time taken to compute Gelu: 0.000065 seconds
+	Time taken to compute H2: 0.021437 seconds
+	Time taken to compute MLP residual connection: 0.000011 seconds
+======== Decoding round 1 ========
+	Time taken to compute word embedding: 0.004079 seconds
+======== Decoding layer 0 ========
+	Time taken to compute attention pre layer norm: 0.000025 seconds
+	Time taken to compute Q, K, V: 0.016068 seconds
+	Time taken to compute S: 0.007694 seconds
+	Time taken to compute P: 0.000071 seconds
+	Time taken to compute O: 0.031875 seconds
+	Time taken to compute attention block: 0.039689 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000024 seconds
+	Time taken to compute H1: 0.021666 seconds
+	Time taken to compute Gelu: 0.000065 seconds
+	Time taken to compute H2: 0.021443 seconds
+	Time taken to compute MLP residual connection: 0.000009 seconds
+======== Decoding layer 1 ========
+	Time taken to compute attention pre layer norm: 0.000022 seconds
+	Time taken to compute Q, K, V: 0.016096 seconds
+	Time taken to compute S: 0.007714 seconds
+	Time taken to compute P: 0.000149 seconds
+	Time taken to compute O: 0.032937 seconds
+	Time taken to compute attention block: 0.040824 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000023 seconds
+	Time taken to compute H1: 0.021710 seconds
+	Time taken to compute Gelu: 0.000065 seconds
+	Time taken to compute H2: 0.021457 seconds
+	Time taken to compute MLP residual connection: 0.000011 seconds
+======== Decoding layer 2 ========
+	Time taken to compute attention pre layer norm: 0.000022 seconds
+	Time taken to compute Q, K, V: 0.016071 seconds
+	Time taken to compute S: 0.007723 seconds
+	Time taken to compute P: 0.000147 seconds
+	Time taken to compute O: 0.035126 seconds
+	Time taken to compute attention block: 0.043038 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000024 seconds
+	Time taken to compute H1: 0.021875 seconds
+	Time taken to compute Gelu: 0.000065 seconds
+	Time taken to compute H2: 0.021506 seconds
+	Time taken to compute MLP residual connection: 0.000009 seconds
+======== Decoding layer 3 ========
+	Time taken to compute attention pre layer norm: 0.000023 seconds
+	Time taken to compute Q, K, V: 0.016130 seconds
+	Time taken to compute S: 0.007662 seconds
+	Time taken to compute P: 0.000142 seconds
+	Time taken to compute O: 0.033565 seconds
+	Time taken to compute attention block: 0.041407 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000023 seconds
+	Time taken to compute H1: 0.021822 seconds
+	Time taken to compute Gelu: 0.000064 seconds
+	Time taken to compute H2: 0.021462 seconds
+	Time taken to compute MLP residual connection: 0.000009 seconds
+======== Decoding layer 4 ========
+	Time taken to compute attention pre layer norm: 0.000022 seconds
+	Time taken to compute Q, K, V: 0.016055 seconds
+	Time taken to compute S: 0.007625 seconds
+	Time taken to compute P: 0.000151 seconds
+	Time taken to compute O: 0.033936 seconds
+	Time taken to compute attention block: 0.041744 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000022 seconds
+	Time taken to compute H1: 0.021779 seconds
+	Time taken to compute Gelu: 0.000067 seconds
+	Time taken to compute H2: 0.021546 seconds
+	Time taken to compute MLP residual connection: 0.000012 seconds
+======== Decoding layer 5 ========
+	Time taken to compute attention pre layer norm: 0.000022 seconds
+	Time taken to compute Q, K, V: 0.016148 seconds
+	Time taken to compute S: 0.007669 seconds
+	Time taken to compute P: 0.000123 seconds
+	Time taken to compute O: 0.035314 seconds
+	Time taken to compute attention block: 0.043132 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000023 seconds
+	Time taken to compute H1: 0.021738 seconds
+	Time taken to compute Gelu: 0.000069 seconds
+	Time taken to compute H2: 0.021455 seconds
+	Time taken to compute MLP residual connection: 0.000009 seconds
+======== Decoding round 2 ========
+	Time taken to compute word embedding: 0.004091 seconds
+======== Decoding layer 0 ========
+	Time taken to compute attention pre layer norm: 0.000024 seconds
+	Time taken to compute Q, K, V: 0.016058 seconds
+	Time taken to compute S: 0.007684 seconds
+	Time taken to compute P: 0.000080 seconds
+	Time taken to compute O: 0.038362 seconds
+	Time taken to compute attention block: 0.046155 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000022 seconds
+	Time taken to compute H1: 0.021827 seconds
+	Time taken to compute Gelu: 0.000064 seconds
+	Time taken to compute H2: 0.021484 seconds
+	Time taken to compute MLP residual connection: 0.000009 seconds
+======== Decoding layer 1 ========
+	Time taken to compute attention pre layer norm: 0.000044 seconds
+	Time taken to compute Q, K, V: 0.016127 seconds
+	Time taken to compute S: 0.007657 seconds
+	Time taken to compute P: 0.000148 seconds
+	Time taken to compute O: 0.033701 seconds
+	Time taken to compute attention block: 0.041539 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000023 seconds
+	Time taken to compute H1: 0.021910 seconds
+	Time taken to compute Gelu: 0.000065 seconds
+	Time taken to compute H2: 0.021500 seconds
+	Time taken to compute MLP residual connection: 0.000009 seconds
+======== Decoding layer 2 ========
+	Time taken to compute attention pre layer norm: 0.000024 seconds
+	Time taken to compute Q, K, V: 0.016067 seconds
+	Time taken to compute S: 0.007680 seconds
+	Time taken to compute P: 0.000149 seconds
+	Time taken to compute O: 0.035628 seconds
+	Time taken to compute attention block: 0.043489 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000023 seconds
+	Time taken to compute H1: 0.021859 seconds
+	Time taken to compute Gelu: 0.000067 seconds
+	Time taken to compute H2: 0.021532 seconds
+	Time taken to compute MLP residual connection: 0.000010 seconds
+======== Decoding layer 3 ========
+	Time taken to compute attention pre layer norm: 0.000023 seconds
+	Time taken to compute Q, K, V: 0.016194 seconds
+	Time taken to compute S: 0.007688 seconds
+	Time taken to compute P: 0.000140 seconds
+	Time taken to compute O: 0.036855 seconds
+	Time taken to compute attention block: 0.044716 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000023 seconds
+	Time taken to compute H1: 0.021890 seconds
+	Time taken to compute Gelu: 0.000064 seconds
+	Time taken to compute H2: 0.021569 seconds
+	Time taken to compute MLP residual connection: 0.000009 seconds
+======== Decoding layer 4 ========
+	Time taken to compute attention pre layer norm: 0.000022 seconds
+	Time taken to compute Q, K, V: 0.016108 seconds
+	Time taken to compute S: 0.007743 seconds
+	Time taken to compute P: 0.000143 seconds
+	Time taken to compute O: 0.036430 seconds
+	Time taken to compute attention block: 0.044345 seconds
+	Time taken to compute attention residual connection: 0.000007 seconds
+	Time taken to compute MLP pre layer norm: 0.000024 seconds
+	Time taken to compute H1: 0.021813 seconds
+	Time taken to compute Gelu: 0.000065 seconds
+	Time taken to compute H2: 0.021517 seconds
+	Time taken to compute MLP residual connection: 0.000010 seconds
+======== Decoding layer 5 ========
+	Time taken to compute attention pre layer norm: 0.000022 seconds
+	Time taken to compute Q, K, V: 0.016222 seconds
+	Time taken to compute S: 0.007670 seconds
+	Time taken to compute P: 0.000124 seconds
+	Time taken to compute O: 0.033213 seconds
+	Time taken to compute attention block: 0.041047 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000022 seconds
+	Time taken to compute H1: 0.021891 seconds
+	Time taken to compute Gelu: 0.000074 seconds
+	Time taken to compute H2: 0.021559 seconds
+	Time taken to compute MLP residual connection: 0.000009 seconds
+======== Decoding round 3 ========
+	Time taken to compute word embedding: 0.004153 seconds
+======== Decoding layer 0 ========
+	Time taken to compute attention pre layer norm: 0.000024 seconds
+	Time taken to compute Q, K, V: 0.016099 seconds
+	Time taken to compute S: 0.007718 seconds
+	Time taken to compute P: 0.000068 seconds
+	Time taken to compute O: 0.034272 seconds
+	Time taken to compute attention block: 0.042088 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000025 seconds
+	Time taken to compute H1: 0.021773 seconds
+	Time taken to compute Gelu: 0.000064 seconds
+	Time taken to compute H2: 0.021484 seconds
+	Time taken to compute MLP residual connection: 0.000011 seconds
+======== Decoding layer 1 ========
+	Time taken to compute attention pre layer norm: 0.000022 seconds
+	Time taken to compute Q, K, V: 0.016058 seconds
+	Time taken to compute S: 0.007702 seconds
+	Time taken to compute P: 0.000162 seconds
+	Time taken to compute O: 0.038245 seconds
+	Time taken to compute attention block: 0.046135 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000024 seconds
+	Time taken to compute H1: 0.021759 seconds
+	Time taken to compute Gelu: 0.000066 seconds
+	Time taken to compute H2: 0.021475 seconds
+	Time taken to compute MLP residual connection: 0.000008 seconds
+======== Decoding layer 2 ========
+	Time taken to compute attention pre layer norm: 0.000023 seconds
+	Time taken to compute Q, K, V: 0.016120 seconds
+	Time taken to compute S: 0.007712 seconds
+	Time taken to compute P: 0.000148 seconds
+	Time taken to compute O: 0.033249 seconds
+	Time taken to compute attention block: 0.041140 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000022 seconds
+	Time taken to compute H1: 0.021745 seconds
+	Time taken to compute Gelu: 0.000073 seconds
+	Time taken to compute H2: 0.021515 seconds
+	Time taken to compute MLP residual connection: 0.000010 seconds
+======== Decoding layer 3 ========
+	Time taken to compute attention pre layer norm: 0.000022 seconds
+	Time taken to compute Q, K, V: 0.015960 seconds
+	Time taken to compute S: 0.007603 seconds
+	Time taken to compute P: 0.000140 seconds
+	Time taken to compute O: 0.035599 seconds
+	Time taken to compute attention block: 0.043372 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000024 seconds
+	Time taken to compute H1: 0.021757 seconds
+	Time taken to compute Gelu: 0.000065 seconds
+	Time taken to compute H2: 0.021526 seconds
+	Time taken to compute MLP residual connection: 0.000009 seconds
+======== Decoding layer 4 ========
+	Time taken to compute attention pre layer norm: 0.000022 seconds
+	Time taken to compute Q, K, V: 0.015874 seconds
+	Time taken to compute S: 0.007367 seconds
+	Time taken to compute P: 0.000145 seconds
+	Time taken to compute O: 0.039063 seconds
+	Time taken to compute attention block: 0.046605 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000024 seconds
+	Time taken to compute H1: 0.021688 seconds
+	Time taken to compute Gelu: 0.000064 seconds
+	Time taken to compute H2: 0.021301 seconds
+	Time taken to compute MLP residual connection: 0.000010 seconds
+======== Decoding layer 5 ========
+	Time taken to compute attention pre layer norm: 0.000022 seconds
+	Time taken to compute Q, K, V: 0.016172 seconds
+	Time taken to compute S: 0.007655 seconds
+	Time taken to compute P: 0.000125 seconds
+	Time taken to compute O: 0.035944 seconds
+	Time taken to compute attention block: 0.043765 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000023 seconds
+	Time taken to compute H1: 0.021422 seconds
+	Time taken to compute Gelu: 0.000066 seconds
+	Time taken to compute H2: 0.021143 seconds
+	Time taken to compute MLP residual connection: 0.000008 seconds
+======== Decoding round 4 ========
+	Time taken to compute word embedding: 0.004077 seconds
+======== Decoding layer 0 ========
+	Time taken to compute attention pre layer norm: 0.000025 seconds
+	Time taken to compute Q, K, V: 0.016084 seconds
+	Time taken to compute S: 0.007372 seconds
+	Time taken to compute P: 0.000069 seconds
+	Time taken to compute O: 0.037299 seconds
+	Time taken to compute attention block: 0.044769 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000024 seconds
+	Time taken to compute H1: 0.021753 seconds
+	Time taken to compute Gelu: 0.000081 seconds
+	Time taken to compute H2: 0.021031 seconds
+	Time taken to compute MLP residual connection: 0.000009 seconds
+======== Decoding layer 1 ========
+	Time taken to compute attention pre layer norm: 0.000023 seconds
+	Time taken to compute Q, K, V: 0.015901 seconds
+	Time taken to compute S: 0.007491 seconds
+	Time taken to compute P: 0.000152 seconds
+	Time taken to compute O: 0.036349 seconds
+	Time taken to compute attention block: 0.044030 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000023 seconds
+	Time taken to compute H1: 0.021540 seconds
+	Time taken to compute Gelu: 0.000065 seconds
+	Time taken to compute H2: 0.021399 seconds
+	Time taken to compute MLP residual connection: 0.000009 seconds
+======== Decoding layer 2 ========
+	Time taken to compute attention pre layer norm: 0.000022 seconds
+	Time taken to compute Q, K, V: 0.016066 seconds
+	Time taken to compute S: 0.007253 seconds
+	Time taken to compute P: 0.000148 seconds
+	Time taken to compute O: 0.040775 seconds
+	Time taken to compute attention block: 0.048215 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000023 seconds
+	Time taken to compute H1: 0.021546 seconds
+	Time taken to compute Gelu: 0.000065 seconds
+	Time taken to compute H2: 0.021230 seconds
+	Time taken to compute MLP residual connection: 0.000009 seconds
+======== Decoding layer 3 ========
+	Time taken to compute attention pre layer norm: 0.000024 seconds
+	Time taken to compute Q, K, V: 0.015964 seconds
+	Time taken to compute S: 0.007277 seconds
+	Time taken to compute P: 0.000140 seconds
+	Time taken to compute O: 0.041366 seconds
+	Time taken to compute attention block: 0.048819 seconds
+	Time taken to compute attention residual connection: 0.000007 seconds
+	Time taken to compute MLP pre layer norm: 0.000024 seconds
+	Time taken to compute H1: 0.021310 seconds
+	Time taken to compute Gelu: 0.000065 seconds
+	Time taken to compute H2: 0.021373 seconds
+	Time taken to compute MLP residual connection: 0.000009 seconds
+======== Decoding layer 4 ========
+	Time taken to compute attention pre layer norm: 0.000023 seconds
+	Time taken to compute Q, K, V: 0.016028 seconds
+	Time taken to compute S: 0.007725 seconds
+	Time taken to compute P: 0.000145 seconds
+	Time taken to compute O: 0.037977 seconds
+	Time taken to compute attention block: 0.045897 seconds
+	Time taken to compute attention residual connection: 0.000007 seconds
+	Time taken to compute MLP pre layer norm: 0.000024 seconds
+	Time taken to compute H1: 0.021846 seconds
+	Time taken to compute Gelu: 0.000120 seconds
+	Time taken to compute H2: 0.021741 seconds
+	Time taken to compute MLP residual connection: 0.000011 seconds
+======== Decoding layer 5 ========
+	Time taken to compute attention pre layer norm: 0.000021 seconds
+	Time taken to compute Q, K, V: 0.016860 seconds
+	Time taken to compute S: 0.007690 seconds
+	Time taken to compute P: 0.000127 seconds
+	Time taken to compute O: 0.038267 seconds
+	Time taken to compute attention block: 0.046118 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000023 seconds
+	Time taken to compute H1: 0.022204 seconds
+	Time taken to compute Gelu: 0.000067 seconds
+	Time taken to compute H2: 0.021380 seconds
+	Time taken to compute MLP residual connection: 0.000009 seconds
+======== Decoding round 5 ========
+	Time taken to compute word embedding: 0.004181 seconds
+======== Decoding layer 0 ========
+	Time taken to compute attention pre layer norm: 0.000025 seconds
+	Time taken to compute Q, K, V: 0.016103 seconds
+	Time taken to compute S: 0.007747 seconds
+	Time taken to compute P: 0.000070 seconds
+	Time taken to compute O: 0.036246 seconds
+	Time taken to compute attention block: 0.044094 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000024 seconds
+	Time taken to compute H1: 0.021756 seconds
+	Time taken to compute Gelu: 0.000067 seconds
+	Time taken to compute H2: 0.021442 seconds
+	Time taken to compute MLP residual connection: 0.000011 seconds
+======== Decoding layer 1 ========
+	Time taken to compute attention pre layer norm: 0.000022 seconds
+	Time taken to compute Q, K, V: 0.016118 seconds
+	Time taken to compute S: 0.007631 seconds
+	Time taken to compute P: 0.000150 seconds
+	Time taken to compute O: 0.036277 seconds
+	Time taken to compute attention block: 0.044090 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000023 seconds
+	Time taken to compute H1: 0.021317 seconds
+	Time taken to compute Gelu: 0.000065 seconds
+	Time taken to compute H2: 0.021432 seconds
+	Time taken to compute MLP residual connection: 0.000009 seconds
+======== Decoding layer 2 ========
+	Time taken to compute attention pre layer norm: 0.000022 seconds
+	Time taken to compute Q, K, V: 0.016217 seconds
+	Time taken to compute S: 0.007709 seconds
+	Time taken to compute P: 0.000151 seconds
+	Time taken to compute O: 0.036432 seconds
+	Time taken to compute attention block: 0.044335 seconds
+	Time taken to compute attention residual connection: 0.000009 seconds
+	Time taken to compute MLP pre layer norm: 0.000024 seconds
+	Time taken to compute H1: 0.021689 seconds
+	Time taken to compute Gelu: 0.000065 seconds
+	Time taken to compute H2: 0.021566 seconds
+	Time taken to compute MLP residual connection: 0.000010 seconds
+======== Decoding layer 3 ========
+	Time taken to compute attention pre layer norm: 0.000022 seconds
+	Time taken to compute Q, K, V: 0.016079 seconds
+	Time taken to compute S: 0.007746 seconds
+	Time taken to compute P: 0.000145 seconds
+	Time taken to compute O: 0.033438 seconds
+	Time taken to compute attention block: 0.041370 seconds
+	Time taken to compute attention residual connection: 0.000008 seconds
+	Time taken to compute MLP pre layer norm: 0.000024 seconds
+	Time taken to compute H1: 0.021788 seconds
+	Time taken to compute Gelu: 0.000065 seconds
+	Time taken to compute H2: 0.021443 seconds
+	Time taken to compute MLP residual connection: 0.000009 seconds
+======== Decoding layer 4 ========
+	Time taken to compute attention pre layer norm: 0.000023 seconds
+	Time taken to compute Q, K, V: 0.016159 seconds
+	Time taken to compute S: 0.007687 seconds
+	Time taken to compute P: 0.000145 seconds
+	Time taken to compute O: 0.034198 seconds
+	Time taken to compute attention block: 0.042070 seconds
+	Time taken to compute attention residual connection: 0.000007 seconds
+	Time taken to compute MLP pre layer norm: 0.000023 seconds
+	Time taken to compute H1: 0.021808 seconds
+	Time taken to compute Gelu: 0.000064 seconds
+	Time taken to compute H2: 0.021594 seconds
+	Time taken to compute MLP residual connection: 0.000011 seconds
+======== Decoding layer 5 ========
+	Time taken to compute attention pre layer norm: 0.000022 seconds
+	Time taken to compute Q, K, V: 0.016046 seconds
+	Time taken to compute S: 0.007700 seconds
+	Time taken to compute P: 0.000124 seconds
+	Time taken to compute O: 0.035685 seconds
+	Time taken to compute attention block: 0.043541 seconds
+	Time taken to compute attention residual connection: 0.000009 seconds
+	Time taken to compute MLP pre layer norm: 0.000023 seconds
+	Time taken to compute H1: 0.021829 seconds
+	Time taken to compute Gelu: 0.000066 seconds
+	Time taken to compute H2: 0.021400 seconds
+	Time taken to compute MLP residual connection: 0.000009 seconds

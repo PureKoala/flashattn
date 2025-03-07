@@ -71,8 +71,8 @@ void flash2_forward_kernel(
             data_t row_m = -INFINITY;
             for (int rc = 0; rc < Bc * Br; rc += ntx){
                 if (tx + rc < Bc * Br){
-                    int y = rc / Bc;
-                    int x = rc % Bc;
+                    int y = (tx + rc) / Bc;
+                    int x = (tx + rc) % Bc;
                     data_t sum = 0;
                     for (int z = 0; z < d; z++){
                         sum += Qi[y * d + z] * Kj[x * d + z];
@@ -109,8 +109,8 @@ void flash2_forward_kernel(
             // compute O, l, m
             for (int rd = 0; rd < Br * d; rd += ntx){
                 if (tx + rd < Br * d){
-                    int r = rd / d;
-                    int x = rd % d;
+                    int r = (tx + rd) / d;
+                    int x = (tx + rd) % d;
                     data_t pv = 0; // Pij * Vj
                     for (int y = 0; y < Bc; y++){
                         pv += SP[r * Bc + y] * Vj[y * d + x];
@@ -130,8 +130,8 @@ void flash2_forward_kernel(
         // write O, L to HBM
         for (int rd = 0; rd < Br * d; rd += ntx){
             if (tx + rd < Br * d){
-                int r = rd / d;
-                int x = rd % d;
+                int r = (tx + rd) / d;
+                int x = (tx + rd) % d;
                 O[qkv_offset + tile_size_Q * i + r * d + x] = O[qkv_offset + tile_size_Q * i + r * d + x] / l[tx];
             }
         }

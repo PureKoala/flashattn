@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/AttnPThread.dir/src/attention-decoder.c.o CMakeFiles/AttnPThread.dir/src/attention-prefill.c.o CMakeFiles/AttnPThread.dir/src/forward.c.o CMakeFiles/AttnPThread.dir/src/util.c.o -o AttnPThread  -lm 

@@ -1,0 +1,3 @@
+/home/v-hongyiguan/flashattn/build/CMakeFiles/AttnPThread.dir
+/home/v-hongyiguan/flashattn/build/CMakeFiles/edit_cache.dir
+/home/v-hongyiguan/flashattn/build/CMakeFiles/rebuild_cache.dir

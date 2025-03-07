@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/FlashAttn.dir/src/attention-decoder.c.o CMakeFiles/FlashAttn.dir/src/attention-prefill.c.o CMakeFiles/FlashAttn.dir/src/forward.c.o CMakeFiles/FlashAttn.dir/src/util.c.o -o FlashAttn  -lm 
